@@ -30,7 +30,6 @@ app.set('view engine', 'html');
 var staticRouter = express.static(__dirname + '/../public');
 app.use(staticRouter);
 
-
 // handle GET Request at /test URL
 app.get('/test', function (request, response) {
     // response.sendFile(__dirname + '/views/index.html');
@@ -41,10 +40,6 @@ app.get('/test', function (request, response) {
         list: [1, 2, 3, 4, 5]
     });
 });
-
-
-
-
 
 
 
