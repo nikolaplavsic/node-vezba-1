@@ -1,13 +1,17 @@
 
 var path = require('path');
-entryPath = path.join(__dirname, 'app', 'app.js');
+appEntryPath = path.join(__dirname, 'app', 'app.js');
+styleEntryPath = path.join(__dirname, 'app', 'sass', 'main.scss');
+
 distPath = path.join(__dirname, 'public', 'dist');
+
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     mode: 'development',
 
     entry: {
-        app: entryPath
+        app: appEntryPath
     },
 
     output: {
@@ -28,9 +32,23 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader']
+                })
             }
         ]
     },
 
-    plugins: []
+    plugins: [
+        new ExtractTextPlugin(
+            {
+                filename: path.join('css', 'styles.css'),
+                // allChunks: true
+            }
+        )
+    ]
 };

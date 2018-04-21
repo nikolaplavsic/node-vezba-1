@@ -1,2 +1,5 @@
 
-console.log('hello from webpack changed12355555');
+import './sass/main.scss';
+
+
+console.log('hello from webpack 2');

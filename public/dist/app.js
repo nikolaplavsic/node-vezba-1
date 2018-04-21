@@ -79,7 +79,18 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nconsole.log('hello from webpack changed12355555');\n\n//# sourceURL=webpack:///./app/app.js?");
+eval("\n\n__webpack_require__(/*! ./sass/main.scss */ \"./app/sass/main.scss\");\n\nconsole.log('hello from webpack 2');\n\n//# sourceURL=webpack:///./app/app.js?");
+
+/***/ }),
+
+/***/ "./app/sass/main.scss":
+/*!****************************!*\
+  !*** ./app/sass/main.scss ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./app/sass/main.scss?");
 
 /***/ })
 
