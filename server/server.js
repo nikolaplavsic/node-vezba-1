@@ -46,7 +46,7 @@ app.get('/test', function (request, response) {
 
 
 app.listen(8080, function () {
-    console.log('server started');
+    console.log('server started at localhost:8080');
 });
 
 
