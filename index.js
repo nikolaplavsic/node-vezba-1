@@ -2,7 +2,7 @@ var nodemon = require('nodemon');
 var path = require('path');
 var webpack = require('webpack');
 var webpackConfig = require('./webpack.config');
-
+// nesto novo
 var compiler = webpack(webpackConfig);
 
 // We give notice in the terminal when it starts bundling and
